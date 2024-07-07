@@ -1,0 +1,30 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.12.3",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@nuxt/eslint": "^0.3.13",
+    "autoprefixer": "^10.4.16",
+    "destyle.css": "^4.0.0",
+    "postcss": "^8.4.32",
+    "postcss-sort-media-queries": "^5.2.0",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.6",
+    "stylelint": "^15.11.0",
+    "stylelint-config-recess-order": "^4.3.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-scss": "^5.0.1"
+  }
+}
