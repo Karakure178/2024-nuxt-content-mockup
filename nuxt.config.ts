@@ -6,6 +6,20 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/content",
   ],
+  content: {
+    highlight: {
+      theme: "monokai", // GitHubライクなテーマに設定
+    },
+    markdown: {
+      tags: {
+        p: "Paragraph",
+        h2: "H2Headline",
+      },
+    },
+  },
+  css: [
+    'destyle.css'
+  ],
   vite:{
     css: {
       preprocessorOptions: {

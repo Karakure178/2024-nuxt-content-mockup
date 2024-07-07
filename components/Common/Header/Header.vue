@@ -1,20 +1,28 @@
-<script setup></script>
+<script setup>
+const navList = [
+  { id: 1, title: "Home", link: "/home" },
+  { id: 2, title: "Blog", link: "/blog" },
+  { id: 3, title: "Works", link: "/works" },
+  { id: 4, title: "Contact", link: "/contact" },
+];
+</script>
 
 <template>
-  <header class="header-5">
-    <div class="header-inner">
+  <header class="header">
+    <div class="header__inner">
       <CommonHeaderLogo />
-      <nav class="header-nav">
-        <ul class="header-nav-list">
-          <a href="#"><li class="header-nav-item select">About</li></a>
-          <a href="#"><li class="header-nav-item">Works</li></a>
-          <a href="#"><li class="header-nav-item">Contact</li></a>
+      <nav class="header__nav">
+        <ul class="header__navList">
+          <li
+            v-for="item of navList"
+            :key="item.title"
+            class="headerNavList__item"
+          >
+            <a class="headerNavListItem__link" :href="item.link">{{
+              item.title
+            }}</a>
+          </li>
         </ul>
-        <div class="header-ham">
-          <div class="menu2" />
-          <div class="menu2" />
-          <div class="menu2" />
-        </div>
       </nav>
     </div>
   </header>
@@ -24,73 +32,55 @@
 // ===========================================
 // header 全体設定
 // ===========================================
-.header-5 {
+.header {
   width: 100%;
+  background-color: $color-primary_orange;
 }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  max-width: 1024px;
-  height: 60px;
-  padding: 0 0.8em;
+.header__inner {
   margin: 0 auto;
-  font-size: 1.2em;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.header-nav-list {
-  display: inline-block;
-}
-
-.header-nav-item {
-  float: left;
-  padding: 12px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #ccc;
-  text-align: center;
-  list-style: none;
-}
-
-.header-nav-item a {
-  text-decoration: none;
-}
-
-.header-ham {
-  display: none;
-}
-
-.menu2 {
-  width: 20px;
-  height: 3px;
-  margin: 4px 0;
-  margin-right: 0;
-  background-color: #333;
-}
-
-.select {
-  color: #444;
-}
-
-.header-nav-item:hover {
-  background: #eee;
-}
-
-.logo img {
-  width: 70px;
-}
-
-@media screen and (max-width: 480px) {
-  .header-nav-list {
-    display: none;
+  @include L-XL {
+    padding: 32px;
+    max-width: 1080px;
   }
 
-  .header-nav {
-    margin: 0 0 0 auto;
+  @include S-M {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-inline: 15px;
+  }
+}
+
+.header__nav {
+}
+
+.header__navList {
+  display: flex;
+  gap: 16px;
+}
+
+.headerNavList__item {
+}
+
+.headerNavListItem__link {
+  font-size: 16px;
+  font-family: $roboto;
+  color: $color-neutral_dark-content;
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  @include L-XL {
   }
 
-  .header-ham {
-    display: block;
+  @include S-M {
+  }
+
+  @include hover-and-active {
+    opacity: 0.8;
   }
 }
 </style>

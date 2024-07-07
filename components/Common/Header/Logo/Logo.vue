@@ -13,11 +13,9 @@ const logoUrl = "/assets/image/common/header/icon.svg";
 // ロゴ設定
 // ===========================================
 .header__logo {
-  position: absolute;
-  top: 50%;
   border: 1px solid #fff;
-  border-radius: 5px;
-  transform: translateY(-50%);
+  border-radius: 8px;
+  aspect-ratio: 1/1;
 
   @include L-XL {
     width: 60px;
