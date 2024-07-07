@@ -84,3 +84,8 @@ https://eslint.nuxt.com/guide/migration
 
 #### StyleLint
 https://zenn.dev/aoken/articles/86d4cb3e0f8b67
+
+#### 実装参考
+https://github.com/colinlienard/portfolio-2022/tree/main
+https://github.com/aymaneMx/nuxt-portfolio-dev
+https://github.com/IJproject/introduce-myself-portfolio
