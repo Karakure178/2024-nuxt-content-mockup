@@ -78,6 +78,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 #### ESlint
 参考：
 https://zenn.dev/comm_vue_nuxt/articles/setup-nuxt-eslint
+https://zenn.dev/bs_kansai/articles/nuxt3-eslint-module
 
 https://eslint.nuxt.com/guide/migration
 
@@ -89,3 +90,8 @@ https://zenn.dev/aoken/articles/86d4cb3e0f8b67
 https://github.com/colinlienard/portfolio-2022/tree/main
 https://github.com/aymaneMx/nuxt-portfolio-dev
 https://github.com/IJproject/introduce-myself-portfolio
+https://qiita.com/tobita0000/items/4d5f45c189a2926df33f
+https://blog.cloud-acct.com/posts/nuxt3-custom-layout-file/
+https://zenn.dev/aoken/articles/86d4cb3e0f8b67
+https://www.dailyupblog.com/web_development/1573/
+https://shinobiworks.com/blog/943/
