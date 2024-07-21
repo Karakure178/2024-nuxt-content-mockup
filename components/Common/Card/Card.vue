@@ -46,6 +46,7 @@ const props = defineProps({
   border-radius: 8px;
   border: 1px solid $color-neutral_light-content;
   max-width: 325px;
+  height: 100%;
 }
 
 .card__inner {

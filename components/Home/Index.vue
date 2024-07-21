@@ -41,24 +41,28 @@ console.log(news.value, "hello");
 
 <style lang="scss" scoped>
 .news {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  @include L-XL {
+  }
+
+  @include S-M {
+  }
+}
+
+.news__container {
   @include L-XL {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   @include S-M {
     padding-top: 24px;
     padding-left: 16px;
     padding-right: 16px;
-  }
-}
-
-.news__container {
-  @include L-XL {
-  }
-
-  @include S-M {
   }
 }
 
@@ -76,13 +80,18 @@ console.log(news.value, "hello");
 }
 
 .news__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
   @include L-XL {
     padding-top: 24px;
     margin-top: 30px;
     border-top: 1px solid $color-neutral_light-grey;
+    gap: 48px;
   }
 
   @include S-M {
+    gap: 24px;
   }
 }
 
