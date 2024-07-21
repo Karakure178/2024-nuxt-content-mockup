@@ -9,3 +9,10 @@
 
   <CommonFooter />
 </template>
+
+<style lang="scss">
+html {
+  font-family: $notoSans;
+  line-height: 1.5;
+}
+</style>

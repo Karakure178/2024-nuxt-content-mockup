@@ -88,7 +88,6 @@ const props = defineProps({
 
 .cardContainer__title {
   font-size: 24px;
-  line-height: 1.5;
   color: $color-neutral_dark-content;
   letter-spacing: 0.02em;
   font-weight: 500;
