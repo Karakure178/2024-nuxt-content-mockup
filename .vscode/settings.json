@@ -34,5 +34,5 @@
         "source.fixAll.eslint": "explicit"
       }
     },
-    "workbench.colorTheme": "Noctis Azureus",
+    "workbench.colorTheme": "Default Dark Modern",
 }

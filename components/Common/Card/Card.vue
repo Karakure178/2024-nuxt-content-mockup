@@ -1,8 +1,7 @@
 <script setup>
 const props = defineProps({
   href: { type: String, required: true },
-  imgPc: { type: String, required: true },
-  imgSp: { type: String, required: true },
+  img: { type: String, required: true },
   date: { type: String, required: true },
   text: { type: String, required: true },
   title: { type: String, required: true },
@@ -14,10 +13,11 @@ const props = defineProps({
   <a class="card" :href="props.href">
     <div class="card__inner">
       <div class="card__img">
-        <img
-          :src="props.imgPc"
-          :srcset="`${props.imgPc} 1x, ${props.imgSp} 2x`"
-          alt="サムネイル"
+        <nuxt-img
+          :src="props.img"
+          quality="70"
+          sizes="md:100% lg:297px"
+          class="inline-block"
         />
       </div>
 
@@ -45,6 +45,7 @@ const props = defineProps({
   padding-bottom: 20px;
   border-radius: 8px;
   border: 1px solid $color-neutral_light-content;
+  max-width: 325px;
 }
 
 .card__inner {
@@ -52,7 +53,6 @@ const props = defineProps({
   flex-direction: column;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   @include L-XL {
   }
@@ -64,6 +64,7 @@ const props = defineProps({
 .card__img {
   width: 278px;
   aspect-ratio: 278/190;
+  overflow: hidden;
   @include L-XL {
   }
 
@@ -71,6 +72,7 @@ const props = defineProps({
   }
   img {
     width: 100%;
+    object-fit: contain;
   }
 }
 
@@ -89,6 +91,7 @@ const props = defineProps({
   line-height: 1.5;
   color: $color-neutral_dark-content;
   letter-spacing: 0.02em;
+  font-weight: 500;
   @include L-XL {
   }
 
@@ -101,6 +104,7 @@ const props = defineProps({
   line-height: 1.5;
   color: $color-neutral_dark-content;
   letter-spacing: 0.02em;
+  padding-top: 8px;
 
   @include L-XL {
   }

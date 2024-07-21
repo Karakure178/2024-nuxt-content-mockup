@@ -17,6 +17,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@nuxt/eslint": "^0.3.13",
+    "@nuxt/image": "^1.7.0",
     "autoprefixer": "^10.4.16",
     "destyle.css": "^4.0.0",
     "postcss": "^8.4.32",

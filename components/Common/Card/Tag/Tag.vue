@@ -30,7 +30,7 @@ const addClass = computed(() => {
 }
 
 .tag__text {
-  color: $color-primary_white;
+  color: $color-neutral_white;
   font-size: 12px;
 
   @include L-XL {
@@ -48,10 +48,10 @@ const addClass = computed(() => {
 }
 
 .tag--vue {
-  background-color: $color-primary_blue;
+  background-color: $color-primary_indigo;
 }
 
 .tag--next {
-  background-color: $color-primary_green;
+  background-color: $color-neutral_dark-grey;
 }
 </style>
