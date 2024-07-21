@@ -80,14 +80,13 @@ console.log(news.value, "hello");
 }
 
 .news__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   @include L-XL {
     padding-top: 24px;
     margin-top: 30px;
     border-top: 1px solid $color-neutral_light-grey;
-    gap: 48px;
+    gap: 48px 31px;
   }
 
   @include S-M {
