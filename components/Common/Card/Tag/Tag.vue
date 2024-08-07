@@ -1,17 +1,19 @@
-<script setup>
+<script setup lang="ts">
 import { tagParameter } from "./tagParameter";
-const props = defineProps({
-  tag: { type: String, required: true },
-});
+interface Props {
+  tag: string;
+}
+
+const { tag } = defineProps<Props>();
 
 const addClass = computed(() => {
-  return tagParameter[props.tag];
+  return tagParameter[tag];
 });
 </script>
 
 <template>
   <div class="tag" :class="addClass">
-    <span class="tag__text">{{ props.tag }}</span>
+    <span class="tag__text">{{ tag }}</span>
   </div>
 </template>
 

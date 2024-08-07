@@ -1,20 +1,22 @@
-<script setup>
-const props = defineProps({
-  href: { type: String, required: true },
-  img: { type: String, required: true },
-  date: { type: String, required: true },
-  text: { type: String, required: true },
-  title: { type: String, required: true },
-  tag: { type: String, required: true },
-});
+<script setup lang="ts">
+interface Props {
+  href: string;
+  img: string;
+  date: string;
+  text: string;
+  title: string;
+  tag: string;
+}
+
+defineProps<Props>();
 </script>
 
 <template>
-  <a class="card" :href="props.href">
+  <a class="card" :href="href">
     <div class="card__inner">
       <div class="card__img">
         <nuxt-img
-          :src="props.img"
+          :src="img"
           quality="70"
           sizes="md:100% lg:297px"
           class="inline-block"
@@ -22,12 +24,13 @@ const props = defineProps({
       </div>
 
       <div class="card__tagGroup">
-        <CommonCardTag :tag="props.tag" />
-        <CommonCardDate :date="props.date" />
+        <CommonCardTag :tag="tag" />
+        <CommonCardDate :date="date" />
       </div>
+
       <div class="card__container">
-        <h3 class="cardContainer__title">{{ props.title }}</h3>
-        <p class="cardContainer__text">{{ props.text }}</p>
+        <h3 class="cardContainer__title">{{ title }}</h3>
+        <p class="cardContainer__text">{{ text }}</p>
       </div>
     </div>
   </a>

@@ -1,4 +1,5 @@
-export const tagParameter = {
+// keyに型を定義しないとエラーを吐く
+export const tagParameter: { [key: string]: string } = {
   vue: "tag--vue",
   react: "tag--react",
   javascript: "tag--javascript",

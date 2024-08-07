@@ -1,12 +1,13 @@
-<script setup>
-const props = defineProps({
-  date: { type: String, required: true },
-});
+<script setup lang="ts">
+interface Props {
+  date: string;
+}
+const { date } = defineProps<Props>();
 </script>
 
 <template>
   <div class="date">
-    <span class="date__text">{{ props.date }}</span>
+    <span class="date__text">{{ date }}</span>
   </div>
 </template>
 
